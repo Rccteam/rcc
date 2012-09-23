@@ -195,9 +195,9 @@ def submenu2():
     else:
       screen.addstr(5,4, "1 - GPIO PIN setup and development", n)
     if pos==2:
-      screen.addstr(6,4, "2 - Menu-1", h)
+      screen.addstr(6,4, "2 - MPI Cluster Build and Install", h)
     else:
-      screen.addstr(6,4, "2 - Menu-1", n)
+      screen.addstr(6,4, "2 - MPI Cluster Build and Install", n)
     if pos==3:
       screen.addstr(7,4, "3 - Menu-2", h)
     else:
@@ -406,5 +406,4 @@ while getin != ord('4'):
     
   elif getin == ord('4'): # Topmenu option 4
     curses.endwin()
-    os.system('python ./rcc3.py')
     os.system('clear') # Clears the screen so you're left looking at a nice neat bash prompt instead of the left over window
