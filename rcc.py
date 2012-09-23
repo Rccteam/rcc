@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import curses, os 
+import curses,os 
 screen = curses.initscr() 
 curses.noecho() 
 curses.cbreak() 
@@ -14,6 +14,7 @@ sub1get = None
 sub2get = None
 sub3get = None
 environmentmenu = None
+env1get = None
 environmentsubusersetmenu = None
 hardwaremenu = None
 hardkeysetup = None
@@ -150,21 +151,17 @@ def submenu1():
     elif x == ord('8'):
       pos = 8
     elif x == 258:
-    
-
       if pos < 8:
-
-
 	pos += 1
       else: pos = 1
     elif x == 259:
       if pos > 1:
 	  pos += -1
-
       else: pos = 8
     elif x != ord('\n'):
       curses.flash()
   return ord(str(pos))
+  
 # The Raspberry-PI Control Center (RCC)/ Advanced Tune and Setup #
 def submenu2():
   screen.keypad(1)
@@ -240,7 +237,7 @@ def submenu2():
 def submenu3():
   screen.keypad(1)
   curses.init_pair(1,curses.COLOR_BLUE, curses.COLOR_WHITE)
-  pos=3
+  pos=1
   x = None
   h = curses.color_pair(1)
   n = curses.A_NORMAL
@@ -331,7 +328,7 @@ def environmentmenu():
   screen.keypad(1)
   curses.init_pair(1,curses.COLOR_BLUE, curses.COLOR_WHITE)
 
-  pos=1 
+  pos=2 
   x = None 
   h = curses.color_pair(1) #h is the coloring for a highlighted menu option
   n = curses.A_NORMAL #n is the coloring for a non highlighted menu option
@@ -416,8 +413,9 @@ while getin != ord('4'):
   getin = topmenu() 
   
   if getin == ord('1'): # Topmenu option 1,
-    while sub1get !=ord('9'): 
+    while sub1get !=ord('8'): 
       sub1get = submenu1() # ------Submenu 1 Commands------#
+      
       if sub1get == ord('1'): #Submenu 1 option 1
 	while env1get !=ord('8'):
 	  env1get = environmentmenu()
@@ -437,6 +435,7 @@ while getin != ord('4'):
 	()
       elif env1get == ord('8'): # Envmenu 1 option 8
 	os.system('')	
+	
       elif sub1get == ord('2'): # Submenu 1 option 2
 	()
       elif sub1get == ord('3'): # Submenu 1 option 3
@@ -466,12 +465,6 @@ while getin != ord('4'):
       elif sub2get == ord('5'): # Submenu 2 option 5
 	()
       elif sub2get == ord('6'): # Submenu 2 option 6
-	()
-      elif sub2get == ord('7'): # Submenu 2 option 7
-	()
-      elif sub2get == ord('8'): # Submenu 2 option 8
-	()
-      elif sub2get == ord('9'): # Submenu 2 option 3 (Exits to top menu at this point)
 	os.system('')
 	#os.system('uqm')
 
