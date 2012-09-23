@@ -199,33 +199,21 @@ def submenu2():
     else:
       screen.addstr(6,4, "2 - MPI Cluster Build and Install", n)
     if pos==3:
-      screen.addstr(7,4, "3 - Menu-2", h)
+      screen.addstr(7,4, "3 - Install Zram (RAM content compression - expanding to 512 MB)", h)
     else:
-      screen.addstr(7,4, "3 - Menu-2", n)
+      screen.addstr(7,4, "3 - Install Zram (RAM content compression - expanding to 512 MB)"", n)
     if pos==4:
-      screen.addstr(8,4, "4 - Menu-3", h)
+      screen.addstr(8,4, "4 - Expand Swap Size (512MB)", h)
     else:
-      screen.addstr(8,4, "4 - Menu-3", n)
+      screen.addstr(8,4, "4 - Expand Swap Size (512MB)", n)
     if pos==5:
-      screen.addstr(9,4, "5 - Menu-4", h)
+      screen.addstr(9,4, "5 - Boot and MultiBoot setting configuration", h)
     else:
-      screen.addstr(9,4, "5 - Menu-4", n)
+      screen.addstr(9,4, "5 - Boot and MultiBoot setting configuration", n)
     if pos==6:
-      screen.addstr(10,4, "6 - Menu-5", h)
+      screen.addstr(10,4, "6 - Return to Top Menu", h)
     else:
-      screen.addstr(10,4, "6 - Menu-5", n)
-    if pos==7:
-      screen.addstr(11,4, "7 - Menu-6", h)
-    else:
-      screen.addstr(11,4, "7 - Menu-6", n)
-    if pos==8:
-      screen.addstr(12,4, "8 - Menu-7", h)
-    else:
-      screen.addstr(12,4, "8 - Menu-7", n)
-    if pos==9:
-      screen.addstr(13,4, "9 - Return to Top Menu", h)
-    else:
-      screen.addstr(13,4, "9 - Return to Top Menu", n)
+      screen.addstr(10,4, "6 - Return to Top Menu", n)
     screen.refresh()
     x = screen.getch()
 
@@ -242,16 +230,10 @@ def submenu2():
       pos = 5
     elif x == ord('6'):
       pos = 6
-    elif x == ord('7'):
-      pos = 7
-    elif x == ord('8'):
-      pos = 8
-    elif x == ord('9'):
-      pos = 9	
     elif x == 258:
     
 
-      if pos < 9:
+      if pos < 6:
 
 
 	pos += 1
@@ -260,7 +242,7 @@ def submenu2():
       if pos > 1:
 	  pos += -1
 
-      else: pos = 9
+      else: pos = 6
     elif x != ord('\n'):
       curses.flash()
   return ord(str(pos))
