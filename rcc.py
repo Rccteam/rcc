@@ -106,9 +106,9 @@ def submenu1():
     else:
       screen.addstr(6,4, "2 - Hardware", n)
     if pos==3:
-      screen.addstr(7,4, "3 - Software", h)
+      screen.addstr(7,4, "3 - Software Management", h)
     else:
-      screen.addstr(7,4, "3 - Software", n)
+      screen.addstr(7,4, "3 - Software Management", n)
     if pos==4:
       screen.addstr(8,4, "4 - Hardinfo (CPU Benchmarks)", h)
     else:
@@ -118,25 +118,17 @@ def submenu1():
     else:
       screen.addstr(9,4, "5 - Configure Repository Sources", n)
     if pos==6:
-      screen.addstr(10,4, "6 - Menu-1", h)
+      screen.addstr(10,4, "6 - Dmesg Log", h)
     else:
-      screen.addstr(10,4, "6 - Menu-1", n)
+      screen.addstr(10,4, "6 - Dmesg Log", n)
     if pos==7:
-      screen.addstr(11,4, "7 - Menu-2", h)
+      screen.addstr(11,4, "7 - Preconfigured compilations", h)
     else:
-      screen.addstr(11,4, "7 - Menu-2", n)
+      screen.addstr(11,4, "7 - Preconfigured compilations", n)
     if pos==8:
-      screen.addstr(12,4, "8 - Menu-3", h)
+      screen.addstr(12,4, "9 - Return to Top Menu", h)
     else:
-      screen.addstr(12,4, "8 - Menu-3", n)
-    if pos==9:
-      screen.addstr(13,4, "9 - Return to Top Menu", h)
-    else:
-      screen.addstr(13,4, "9 - Return to Top Menu", n)
-    #if pos==10:
-      #screen.addstr(14,4, "9 - Return to Top Menu", h)
-    #else:
-      #screen.addstr(14,4, "9 - Return to Top Menu", n)
+      screen.addstr(12,4, "9 - Return to Top Menu", n)
     screen.refresh()
     x = screen.getch()
 
@@ -157,12 +149,10 @@ def submenu1():
       pos = 7
     elif x == ord('8'):
       pos = 8
-    elif x == ord('9'):
-      pos = 9	
     elif x == 258:
     
 
-      if pos < 9:
+      if pos < 8:
 
 
 	pos += 1
@@ -171,7 +161,7 @@ def submenu1():
       if pos > 1:
 	  pos += -1
 
-      else: pos = 9
+      else: pos = 8
     elif x != ord('\n'):
       curses.flash()
   return ord(str(pos))
@@ -379,7 +369,7 @@ while getin != ord('4'):
     while sub3get !=ord('9'):
       sub3get = submenu3()
       if sub3get == ord('1'): #Submenu 3 option 1
-	os.system('dosbox2 /path/to/EXE -conf /path/to/dosbox.conf -exit') 
+	() 
       elif sub3get == ord('2'): #Submenu 3 option 2
 	()
       elif sub3get == ord('9'): # Submenu 3 option 3 (Exits to top menu at this point)
