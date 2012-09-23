@@ -126,9 +126,9 @@ def submenu1():
     else:
       screen.addstr(11,4, "7 - Preconfigured compilations", n)
     if pos==8:
-      screen.addstr(12,4, "9 - Return to Top Menu", h)
+      screen.addstr(12,4, "8 - Return to Top Menu", h)
     else:
-      screen.addstr(12,4, "9 - Return to Top Menu", n)
+      screen.addstr(12,4, "8 - Return to Top Menu", n)
     screen.refresh()
     x = screen.getch()
 
@@ -437,8 +437,6 @@ while getin != ord('4'):
 	()
       elif env1get == ord('8'): # Envmenu 1 option 8
 	os.system('')	
-
-	
       elif sub1get == ord('2'): # Submenu 1 option 2
 	()
       elif sub1get == ord('3'): # Submenu 1 option 3
@@ -452,8 +450,6 @@ while getin != ord('4'):
       elif sub1get == ord('7'): # Submenu 1 option 7
 	()
       elif sub1get == ord('8'): # Submenu 1 option 8
-	()
-      elif sub1get == ord('9'): # Submenu 1 option 9 (Exits to top menu at this point)
 	os.system('')
 	
   elif getin == ord('2'): # Topmenu option 2,
@@ -486,17 +482,17 @@ while getin != ord('4'):
 	() 
       elif sub3get == ord('2'): #Submenu 3 option 2
 	()
-      elif sub3get == ord('2'): #Submenu 3 option 3
+      elif sub3get == ord('3'): #Submenu 3 option 3
 	()
-      elif sub3get == ord('2'): #Submenu 3 option 4
+      elif sub3get == ord('4'): #Submenu 3 option 4
 	()
-      elif sub3get == ord('2'): #Submenu 3 option 5
+      elif sub3get == ord('5'): #Submenu 3 option 5
 	()
-      elif sub3get == ord('2'): #Submenu 3 option 6
+      elif sub3get == ord('6'): #Submenu 3 option 6
 	()
-      elif sub3get == ord('2'): #Submenu 3 option 7
+      elif sub3get == ord('7'): #Submenu 3 option 7
 	()
-      elif sub3get == ord('2'): #Submenu 3 option 8
+      elif sub3get == ord('8'): #Submenu 3 option 8
 	()
       elif sub3get == ord('9'): # Submenu 3 option 9 (Exits to top menu at this point)
 	os.system('')
