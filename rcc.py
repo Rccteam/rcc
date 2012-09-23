@@ -334,17 +334,29 @@ while getin != ord('4'):
   
   if getin == ord('1'): # Topmenu option 1,
     while sub1get !=ord('9'): 
-      sub1get = submenu1() 
+      sub1get = submenu1() # ------Submenu 1 Commands------#
       if sub1get == ord('1'): #Submenu 1 option 1
 	() 
       elif sub1get == ord('2'): # Submenu 1 option 2
 	()
-      elif sub1get == ord('9'): # Submenu 1 option 3 (Exits to top menu at this point)
+      elif sub1get == ord('3'): # Submenu 1 option 3
+	()
+      elif sub1get == ord('4'): # Submenu 1 option 4
+	()
+      elif sub1get == ord('5'): # Submenu 1 option 5
+	()
+      elif sub1get == ord('6'): # Submenu 1 option 6
+	()
+      elif sub1get == ord('7'): # Submenu 1 option 7
+	()
+      elif sub1get == ord('8'): # Submenu 1 option 8
+	()
+      elif sub1get == ord('9'): # Submenu 1 option 9 (Exits to top menu at this point)
 	os.system('')
 	
   elif getin == ord('2'): # Topmenu option 2,
     while sub2get !=ord('9'):
-      sub2get = submenu2()
+      sub2get = submenu2() # ------Submenu 2 Commands------#
       if sub2get == ord('1'): #Submenu 2 option 1
 	() 
       elif sub2get == ord('2'): # Submenu 2 option 2
@@ -367,12 +379,24 @@ while getin != ord('4'):
 
   elif getin == ord('3'): # Topmenu option 3
     while sub3get !=ord('9'):
-      sub3get = submenu3()
+      sub3get = submenu3()  # ------Submenu 3 Commands------#
       if sub3get == ord('1'): #Submenu 3 option 1
 	() 
       elif sub3get == ord('2'): #Submenu 3 option 2
 	()
-      elif sub3get == ord('9'): # Submenu 3 option 3 (Exits to top menu at this point)
+      elif sub3get == ord('2'): #Submenu 3 option 3
+	()
+      elif sub3get == ord('2'): #Submenu 3 option 4
+	()
+      elif sub3get == ord('2'): #Submenu 3 option 5
+	()
+      elif sub3get == ord('2'): #Submenu 3 option 6
+	()
+      elif sub3get == ord('2'): #Submenu 3 option 7
+	()
+      elif sub3get == ord('2'): #Submenu 3 option 8
+	()
+      elif sub3get == ord('9'): # Submenu 3 option 9 (Exits to top menu at this point)
 	os.system('')
 	#os.system('uqm')
     
