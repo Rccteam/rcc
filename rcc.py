@@ -359,13 +359,13 @@ def environmentmenu():
     else:
       screen.addstr(9,4, "5 - Check Updates", n)
     if pos==6:
-      screen.addstr(11,4, "7 - Add User and Group", h)
+      screen.addstr(10,4, "6 - Add User and Group", h)
     else:
-      screen.addstr(11,4, "7 - Add User and Group", n)
+      screen.addstr(10,4, "6 - Add User and Group", n)
     if pos==7:
-      screen.addstr(12,4, "8 - Return to the Basic Setup Menu", h)
+      screen.addstr(11,4, "7 - Return to the Basic Setup Menu", h)
     else:
-      screen.addstr(12,4, "8 - Return to the Basic Setup Menu", n)      
+      screen.addstr(11,4, "7 - Return to the Basic Setup Menu", n)      
     screen.refresh()
     x = screen.getch() # Gets user input
 
