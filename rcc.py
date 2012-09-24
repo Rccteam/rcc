@@ -359,14 +359,10 @@ def environmentmenu():
     else:
       screen.addstr(9,4, "5 - Check Updates", n)
     if pos==6:
-      screen.addstr(10,4, "6 - Check Updates", h)
-    else:
-      screen.addstr(10,4, "6 - Check Updates", n)
-    if pos==7:
       screen.addstr(11,4, "7 - Add User and Group", h)
     else:
       screen.addstr(11,4, "7 - Add User and Group", n)
-    if pos==8:
+    if pos==7:
       screen.addstr(12,4, "8 - Return to the Basic Setup Menu", h)
     else:
       screen.addstr(12,4, "8 - Return to the Basic Setup Menu", n)      
@@ -387,10 +383,8 @@ def environmentmenu():
       pos = 6
     elif x == ord('7'):
       pos = 7
-    elif x == ord('8'):
-      pos = 8
     elif x == 258:
-      if pos < 8:
+      if pos < 7:
 
 	pos += 1
       else: pos = 1
@@ -398,7 +392,7 @@ def environmentmenu():
       if pos > 1:
 	  pos += -1
 	  
-      else: pos = 8
+      else: pos = 7
     elif x != ord('\n'):
       curses.flash()
   return ord(str(pos))
@@ -544,9 +538,7 @@ while getin != ord('4'):
       elif env1get == ord('6'): # Envmenu 1 option 6
 	()
       elif env1get == ord('7'): # Envmenu 1 option 7
-	()
-      elif env1get == ord('8'): # Envmenu 1 option 8
-	os.system('')	
+	os.system('')
 	
       elif sub1get == ord('2'): # Submenu 1 option 2
 	while hardware1get !=ord('4'):
