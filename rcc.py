@@ -95,7 +95,7 @@ def submenu1():
     screen.clear()
     screen.border(0)
     screen.addstr(2,2, "The Raspberry-PI Control Center (RCC)/Basic Setup", curses.A_STANDOUT)
-    screen.addstr(4,2, "Please selection an option...", curses.A_BOLD)
+    screen.addstr(4,2, "Please select an option...", curses.A_BOLD)
 
     #Detect what is higlighted
     if pos==1:
@@ -173,7 +173,7 @@ def submenu2():
     screen.clear()
     screen.border(0)
     screen.addstr(2,2, "The Raspberry-PI Control Center (RCC)/ Advanced Tune and Setup", curses.A_STANDOUT)
-    screen.addstr(4,2, "Please selection an option...", curses.A_BOLD)
+    screen.addstr(4,2, "Please select an option...", curses.A_BOLD)
 
     #Detect what is higlighted
     if pos==1:
@@ -244,7 +244,7 @@ def submenu3():
     screen.clear()
     screen.border(0)
     screen.addstr(2,2, "The Raspberry-PI Control Center (RCC)/ Board and Sys Information", curses.A_STANDOUT)
-    screen.addstr(4,2, "Please selection an option...", curses.A_BOLD)
+    screen.addstr(4,2, "Please select an option...", curses.A_BOLD)
 
     #Detect what is higlighted
     if pos==1:
@@ -336,7 +336,7 @@ def environmentmenu():
     screen.clear() 
     screen.border(0)
     screen.addstr(0,18, "The Raspberry-PI Control Center (RCC)", curses.A_STANDOUT) # Title
-    screen.addstr(4,2, "Basic Setup /Environment Menu", curses.A_STANDOUT)
+    screen.addstr(4,2, "Basic Setup / Environment Menu", curses.A_STANDOUT)
 	
     if pos==1:
       screen.addstr(5,4, "1 - Time Sync", h)
