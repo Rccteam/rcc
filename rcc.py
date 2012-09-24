@@ -523,7 +523,7 @@ while getin != ord('4'):
       sub1get = submenu1() # ------Submenu 1 Commands------#
       
       if sub1get == ord('1'): #Submenu 1 option 1
-	while env1get !=ord('8'):
+	while env1get !=ord('7'):
 	  env1get = environmentmenu()
       if env1get == ord('1'): # Envmenu 1 option 1
 	()
