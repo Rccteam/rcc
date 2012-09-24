@@ -17,8 +17,8 @@ environmentmenu = None
 env1get = None
 environmentsubusersetmenu = None
 hardwaremenu = None
+hardwarenetmenu = None
 hardkeysetup = None
-hardnetsetup = None
 hardsoundsetup = None
 hardstoragesetup = None
 hardfinehwtuning = None
@@ -458,7 +458,62 @@ def hardwaremenu():
     elif x != ord('\n'):
       curses.flash()
   return ord(str(pos))
+# Hardware Menu / Network Menu
+def hardwarenetmenu():
+  screen.keypad(1)
+  curses.init_pair(1,curses.COLOR_BLUE, curses.COLOR_WHITE)
+  pos=1
+  x = None 
+  h = curses.color_pair(1) #h is the coloring for a highlighted menu option
+  n = curses.A_NORMAL #n is the coloring for a non highlighted menu option
+  while x !=ord('\n'):
+    screen.clear() 
+    screen.border(0)
+    screen.addstr(0,18, "The Raspberry-PI Control Center (RCC)", curses.A_STANDOUT) # Title
+    screen.addstr(4,2, "Environment / Network Menu", curses.A_STANDOUT)
 	
+    if pos==1:
+      screen.addstr(5,4, "1 - Network Service Information", h)
+    else:
+      screen.addstr(5,4, "1 - Network Service Information", n)
+    if pos==2:
+      screen.addstr(6,4, "2 - Wireless Connection Status", h)
+    else:
+      screen.addstr(6,4, "2 - Wireless Connection Status", n)
+    if pos==3:
+      screen.addstr(7,4, "3 - Ethernet Connection Status", h)
+    else:
+      screen.addstr(7,4, "3 - Ethernet Connection Status", n)
+    if pos==4:
+      screen.addstr(8,4, "4 - Return to the menu", h)
+    else:
+      screen.addstr(8,4, "4 - Return to the menu", n)
+    screen.refresh()
+    x = screen.getch() # Gets user input
+
+    if x == ord('1'):
+      pos = 1
+    elif x == ord('2'):
+      pos = 2
+    elif x == ord('3'):
+      pos = 3
+    elif x == ord('4'):
+      pos = 4
+    elif x == 258:
+      if pos < 4:
+
+	pos += 1
+      else: pos = 1
+    elif x == 259:
+      if pos > 1:
+	  pos += -1
+	  
+      else: pos = 4
+    elif x != ord('\n'):
+      curses.flash()
+  return ord(str(pos))
+
+
 # All top and sub menu command part #	
 while getin != ord('4'):
   sub1get = None 
@@ -466,6 +521,7 @@ while getin != ord('4'):
   sub3get = None
   env1get = None
   hardware1get = None
+  hw1net = None
   getin = topmenu() 
   
   if getin == ord('1'): # Topmenu option 1,
@@ -498,7 +554,18 @@ while getin != ord('4'):
       if hardware1get == ord('1'): # hardware1get 1 option 1
 	()
       elif hardware1get == ord('2'): # hardware1get 1 option 2
+  #----------------------------------------------------------
+	while hw1net !=ord('4'):
+	  hw1net = hardwarenetmenu()
+      if hw1net == ord('1'): # hardnetsetup 1 option 1
 	()
+      elif hw1net == ord('2'): # hardnetsetup 1 option 2
+	()
+      elif hw1net == ord('3'): # hardnetsetup 1 option 3
+	()
+      elif hw1net == ord('4'): # hardnetsetup 1 option 4
+	os.system('')
+	
       elif hardware1get == ord('3'): # hardware1get 1 option 3
 	()
       elif hardware1get == ord('4'): # hardware1get 1 option 4
@@ -518,14 +585,14 @@ while getin != ord('4'):
 	os.system('')
 	
   elif getin == ord('2'): # Topmenu option 2,
-    while sub2get !=ord('9'):
+    while sub2get !=ord('6'):
       sub2get = submenu2() # ------Submenu 2 Commands------#
       if sub2get == ord('1'): #Submenu 2 option 1
 	() 
       elif sub2get == ord('2'): # Submenu 2 option 2
 	()
       elif sub2get == ord('3'): # Submenu 2 option 3
-        ()
+	()
       elif sub2get == ord('4'): # Submenu 2 option 4
 	()
       elif sub2get == ord('5'): # Submenu 2 option 5
