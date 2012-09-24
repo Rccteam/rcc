@@ -41,7 +41,7 @@ def topmenu():
     screen.clear() 
     screen.border(0)
     screen.addstr(0,18, "Welcome The Raspberry-PI Control Center (RCC)", curses.A_STANDOUT) # Title for this menu
-    screen.addstr(4,2, "Please selection an option...", curses.A_BOLD) #Subtitle for this menu
+    screen.addstr(4,2, "Please select an option...", curses.A_BOLD) #Subtitle for this menu
 
     if pos==1:
       screen.addstr(5,4, "1 - Basic Setup", h)
@@ -276,9 +276,9 @@ def submenu3():
     else:
       screen.addstr(11,4, "7 - Network Status (ETH, WIFI)", n)
     if pos==8:
-      screen.addstr(12,4, "8 - USB info", h)
+      screen.addstr(12,4, "8 - USB info (Voltage, stats)", h)
     else:
-      screen.addstr(12,4, "8 - USB info", n)
+      screen.addstr(12,4, "8 - USB info (Voltage, stats)", n)
     if pos==9:
       screen.addstr(13,4, "9 - Return to Top Menu", h)
     else:
