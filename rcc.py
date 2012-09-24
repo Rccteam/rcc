@@ -84,6 +84,7 @@ def topmenu():
       curses.flash()
   return ord(str(pos))
 # The Raspberry-PI Control Center (RCC)/Basic Setup #
+
 def submenu1():
   screen.keypad(1)
   curses.init_pair(1,curses.COLOR_BLUE, curses.COLOR_WHITE)
